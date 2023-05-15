@@ -1,46 +1,47 @@
 import React, { useState } from 'react';
 import "../../styles/style.css";
-// import image from "../Basics/images";
 import Menu from "./menuApi";
 import MenuCard from "./MenuCard";
+import Navbar from './Navbar';
+
+const uniqueList =[ 
+  ...new Set(
+   Menu.map((curElem) =>{
+    return curElem.category;
+})
+),
+"All",
+];
 
 const Resturant = () => {
 
   const [menuData, setMenuData] = useState(Menu);
+  const [menuList,setmenuList] = useState(uniqueList);
 
 
   // console.log(menuData);
 
   const filterItem =(category) =>{
+
+      if(category === "All")
+      {
+        setMenuData(Menu);
+        return;
+      }
+
+
     const updatedList = Menu.filter((curElem) =>{
       return curElem.category === category;
     });
     setMenuData(updatedList);
   };
 
-  return(
+  return (
     <>
-    <nav className='navbar'>
-      <div className='btn-group'>
-        <button className='btn-group__item' 
-         onClick={() => filterItem("Breakfast")}>
-          Breakfast</button>
-        <button className='btn-group__item' 
-        onClick={() => filterItem("Lunch")}>
-          Lunch</button>
-        <button className='btn-group__item' 
-        onClick={() => filterItem("Dinner")}>
-          Dinner</button>
-        <button className='btn-group__item' onClick={() =>filterItem("Snack")}>
-          Snack</button>
-          <button className='btn-group__item' onClick={() => setMenuData(Menu)}>All
-          </button>
-
-      </div>
-    </nav>
-    <MenuCard menuData={ menuData  }/>
-    </> 
-    );
+      <Navbar filterItem={filterItem} menuList={menuList} />
+      <MenuCard menuData={menuData} />
+    </>
+  );
 };
 
 export default Resturant ;

@@ -1,6 +1,6 @@
 const Menu =[{
     id:1,
-    image:"waiwai.jpg",
+    image:"images/waiwai.jpg",
     name:"waiwai",
     category:"Snack",
     price:25,
@@ -8,7 +8,7 @@ const Menu =[{
 },
 {
     id:2,
-    image:"waiwai.jpg",
+    image:"images/pizza1.jpg",
     name:"Pizza",
     category:"Lunch",
     price:325,
@@ -16,7 +16,7 @@ const Menu =[{
 },
 {
     id:3,
-    image:"waiwai.jpg",
+    image:"images/rice.jpg",
     name:"rice",
     category:"Dinner",
     price:225,
@@ -24,7 +24,7 @@ const Menu =[{
 },
 {
     id:4,
-    image:"waiwai.jpg",
+    image:"images/soup.jpg",
     name:"soup",
     category:"Dinner",
     price:125,
@@ -32,7 +32,7 @@ const Menu =[{
 },
 {
     id:5,
-    image:"waiwai.jpg",
+    image:"images/momo.jpg",
     name:"momo",
     category:"Lunch",
     price:155,
@@ -40,7 +40,7 @@ const Menu =[{
 },
 {
     id:6,
-    image:"waiwai.jpg",
+    image:"images/roti.jpg",
     name:"Roti",
     category:"Breakfast",
     price:55,
@@ -48,7 +48,7 @@ const Menu =[{
 },
 {
     id:7,
-    image:"waiwai.jpg",
+    image:"images/pakoda.jpg",
     name:"Pakoda",
     category:"Snack",
     price:50,
@@ -56,7 +56,7 @@ const Menu =[{
 },
 {
     id:8,
-    image:"waiwai.jpg",
+    image:"images/chowmein.jpg",
     name:"Chowmein",
     category:"Dinner",
     price:150,
@@ -64,7 +64,7 @@ const Menu =[{
 },
 {
     id:9,
-    image:"waiwai.jpg",
+    image:"images/burger.jpg",
     name:"Burger",
     category:"Dinner",
     price:135,
